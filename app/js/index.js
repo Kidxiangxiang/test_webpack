@@ -1,7 +1,7 @@
-require('./main.scss');
-//import "./main.scss";
+require('../css/main.scss');
+//import "./css/main.scss";
 
-var sub = require('./sub');
+var sub = require('../js/sub');
 var $ = require('webpack-zepto');
 var app  = document.createElement('div');
 app.innerHTML = '<h1>Hello World</h1>';

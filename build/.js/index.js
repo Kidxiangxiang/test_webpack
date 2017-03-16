@@ -63,32 +63,20 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-function generateText() {
-  var element = document.createElement('h2');
-  element.innerHTML = "Hello h2 world";
-  return element;
-}
-
-module.exports = generateText;
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(6);
+var content = __webpack_require__(5);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(9)(content, {});
+var update = __webpack_require__(8)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -105,7 +93,7 @@ if(false) {
 }
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports) {
 
 /* Zepto v1.1.6 - zepto event ajax form ie - zeptojs.com/license */
@@ -1694,7 +1682,7 @@ var Zepto = module.exports = (function() {
 })(Zepto)
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1815,7 +1803,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1829,9 +1817,9 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(3)
-var ieee754 = __webpack_require__(8)
-var isArray = __webpack_require__(5)
+var base64 = __webpack_require__(2)
+var ieee754 = __webpack_require__(7)
+var isArray = __webpack_require__(4)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -3609,10 +3597,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -3623,21 +3611,21 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(7)(undefined);
+exports = module.exports = __webpack_require__(6)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "h1 {\n  color: yellow;\n  background-image: url(" + __webpack_require__(10) + "); }\n", ""]);
+exports.push([module.i, "h1 {\n  color: yellow;\n  background-image: url(" + __webpack_require__(9) + "); }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -3716,10 +3704,10 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -3809,7 +3797,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /*
@@ -4061,13 +4049,13 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/jpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWcvMDA5LmpwZyI7"
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports) {
 
 var g;
@@ -4094,14 +4082,27 @@ module.exports = g;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
+/***/ (function(module, exports) {
+
+function generateText() {
+  var element = document.createElement('h2');
+  element.innerHTML = "Hello h2 world";
+  return element;
+}
+
+module.exports = generateText;
+
+/***/ }),
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
+__webpack_require__(0);
 //import "./main.scss";
 
-var sub = __webpack_require__(0);
-var $ = __webpack_require__(2);
+var sub = __webpack_require__(11);
+var $ = __webpack_require__(1);
 var app  = document.createElement('div');
 app.innerHTML = '<h1>Hello World</h1>';
 app.appendChild(sub());

@@ -1,0 +1,12 @@
+@import "h1.scss";
+
+h1{
+    color: $red;
+   
+}
+.pic {
+    height: 500px;
+    width: 800px;
+    background: url(../img/009.jpg) no-repeat;
+    background-size: 800px 500px; 
+}
