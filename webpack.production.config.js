@@ -12,11 +12,11 @@ module.exports = {
   	index: path.resolve(APP_PATH, './js/index.js'),
   	app: path.resolve(APP_PATH, './js/app.js'),
   	vendors: ['webpack-zepto']
-  },
+  }, 
   //输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: BUILD_PATH,
-    filename:  'js/[name].js'
+    filename:  'js/[name].[chunkHash].js'
   },
   module: {
     loaders: [
@@ -41,21 +41,27 @@ module.exports = {
   },
   //添加我们的插件 会自动生成一个html文件
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true}),
-    new webpack.optimize.CommonsChunkPlugin({name:'vendors', filename:'js/vendors.js'}),
+    //new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new webpack.optimize.CommonsChunkPlugin({
+    	//name:'vendors', filename:'js/[name]-[hash].js'
+    	name: ['common','vendors','manifest']
+    }),
     new HtmlwebpackPlugin({
       title: 'Hello World app',
       template: path.resolve(APP_PATH, 'index.html'),
       filename: 'index.html',
-      chunks: ['index','vendors'],
+      chunks: ['common','index','vendors','manifest'],
       inject: 'body'
     }),
     new HtmlwebpackPlugin({
       title: 'New Hello World app',
       template: path.resolve(APP_PATH, 'app.html'),
       filename: 'app.html',
-      chunks: ['app','vendors'],
+      chunks: ['common','app','vendors','manifest'],
       inject: 'body'
     })
-  ]
+  ],
+  externals:{
+  	"jquery":"Jquery"
+  }
 };

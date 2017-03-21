@@ -1,7 +1,7 @@
-require('../css/main.scss');
-
 var $ = require('webpack-zepto');
 
+var sub = require('./sub');
+require('./aa')
 $(function(){
-	$("body").html("<h1>New Hello World!</h1>");
+	$("body").html(sub());
 });
